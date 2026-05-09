@@ -21,7 +21,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="hidden md:flex gap-8 text-sm font-medium">
+          <div className="block md:hidden text-3xl">
 
             <a href="#products" className="hover:text-black transition">
               Products
