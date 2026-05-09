@@ -9,74 +9,76 @@ export default function App() {
 
       <header className="sticky top-0 z-50 bg-white border-b shadow-sm backdrop-blur-lg">
 
-  <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
 
-    <div>
-      <h1 className="text-2xl font-bold tracking-tight">
-        Royal Hardware
-      </h1>
+          <div className="min-w-0">
 
-      <p className="text-sm text-gray-500">
-        Nagavara, Bengaluru
-      </p>
-    </div>
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight truncate">
+              Royal Hardware
+            </h1>
 
-    <div className="hidden md:flex gap-8 text-sm font-medium">
+            <p className="text-xs md:text-sm text-gray-500">
+              Nagavara, Bengaluru
+            </p>
 
-      <a href="#products" className="hover:text-black transition">
-        Products
-      </a>
+          </div>
 
-      <a href="#brands" className="hover:text-black transition">
-        Brands
-      </a>
+          <div className="hidden md:flex gap-8 text-sm font-medium">
 
-      <a href="#gallery" className="hover:text-black transition">
-        Gallery
-      </a>
+            <a href="#products" className="hover:text-black transition">
+              Products
+            </a>
 
-      <a href="#contact" className="hover:text-black transition">
-        Contact
-      </a>
+            <a href="#brands" className="hover:text-black transition">
+              Brands
+            </a>
 
-    </div>
+            <a href="#gallery" className="hover:text-black transition">
+              Gallery
+            </a>
 
-    <button
-      onClick={() => setMenuOpen(!menuOpen)}
-      className="block md:hidden text-3xl font-bold"
-    >
-      ☰
-    </button>
+            <a href="#contact" className="hover:text-black transition">
+              Contact
+            </a>
 
-  </div>
+          </div>
 
-</header>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="block md:hidden text-2xl font-bold flex-shrink-0"
+          >
+            ☰
+          </button>
+
+        </div>
+
+      </header>
 
       {
-  menuOpen && (
+        menuOpen && (
 
-    <div className="md:hidden bg-white border-b shadow-lg px-6 py-6 flex flex-col gap-6 text-lg font-medium">
+          <div className="md:hidden bg-white border-b shadow-lg px-6 py-6 flex flex-col gap-6 text-lg font-medium">
 
-      <a href="#products" onClick={() => setMenuOpen(false)}>
-        Products
-      </a>
+            <a href="#products" onClick={() => setMenuOpen(false)}>
+              Products
+            </a>
 
-      <a href="#brands" onClick={() => setMenuOpen(false)}>
-        Brands
-      </a>
+            <a href="#brands" onClick={() => setMenuOpen(false)}>
+              Brands
+            </a>
 
-      <a href="#gallery" onClick={() => setMenuOpen(false)}>
-        Gallery
-      </a>
+            <a href="#gallery" onClick={() => setMenuOpen(false)}>
+              Gallery
+            </a>
 
-      <a href="#contact" onClick={() => setMenuOpen(false)}>
-        Contact
-      </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
 
-    </div>
+          </div>
 
-  )
-}
+        )
+      }
 
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white animate-fadeIn">
 
@@ -88,7 +90,7 @@ export default function App() {
               Trusted Hardware Store in Nagavara
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight">
               Complete Hardware & Interior Solutions
             </h2>
 
@@ -118,21 +120,21 @@ export default function App() {
             <div className="mt-10 grid grid-cols-3 gap-6">
 
               <div>
-                <h3 className="text-3xl font-bold">500+</h3>
+                <h3 className="text-2xl md:text-3xl font-bold">500+</h3>
                 <p className="text-gray-400 text-sm mt-1">
                   Products Available
                 </p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold">10+</h3>
+                <h3 className="text-2xl md:text-3xl font-bold">10+</h3>
                 <p className="text-gray-400 text-sm mt-1">
                   Years Experience
                 </p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold">1000+</h3>
+                <h3 className="text-2xl md:text-3xl font-bold">1000+</h3>
                 <p className="text-gray-400 text-sm mt-1">
                   Happy Customers
                 </p>
@@ -149,12 +151,12 @@ export default function App() {
               <img
                 src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1Lk1l5OkbSErZMhoLbJfP_DVYFafbTSIaQlwiFpTO_KSAJRwuDHJY7bnDCsD4kRcC1aRHQ-eazBjRDFxlPshy1iiWgp2A8rR-6-tCNflKTY7yfTH1N_ZL0jt42cTfJOryWDtH=w1200-h800"
                 alt="Hardware Store"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[400px] md:h-[500px] object-cover"
               />
 
             </div>
 
-            <div className="absolute -bottom-8 -left-8 bg-white text-black p-6 rounded-3xl shadow-2xl w-72 hover:scale-105 transition duration-500">
+            <div className="absolute -bottom-8 left-4 md:-left-8 bg-white text-black p-6 rounded-3xl shadow-2xl w-64 md:w-72 hover:scale-105 transition duration-500">
 
               <p className="font-bold text-xl">
                 Interior & Construction Supplies
