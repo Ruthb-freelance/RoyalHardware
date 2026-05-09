@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
 
-      <header className="sticky top-0 z-50 bg-white border-b shadow-sm backdrop-blur-lg">
+      <header className="sticky top-0 z-[100] bg-white border-b shadow-sm backdrop-blur-lg">
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
 
@@ -57,7 +57,7 @@ export default function App() {
       {
         menuOpen && (
 
-          <div className="md:hidden bg-white border-b shadow-lg px-6 py-6 flex flex-col gap-6 text-lg font-medium">
+          <div className="md:hidden sticky top-[72px] z-[99] bg-white border-b shadow-lg px-6 py-6 flex flex-col gap-6 text-lg font-medium">
 
             <a href="#products" onClick={() => setMenuOpen(false)}>
               Products
@@ -390,7 +390,7 @@ export default function App() {
       <a
         href="https://wa.me/919876543210"
         target="_blank"
-        className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:scale-110 active:scale-95 transition duration-300"
+        className="fixed bottom-6 right-6 z-40 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:scale-110 active:scale-95 transition duration-300"
       >
         WhatsApp
       </a>
