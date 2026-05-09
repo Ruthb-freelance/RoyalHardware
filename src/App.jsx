@@ -21,78 +21,64 @@ export default function App() {
             </p>
           </div>
 
-          <div className="block md:hidden text-3xl">
+          <div className="flex items-center gap-4">
 
-            <a href="#products" className="hover:text-black transition">
-              Products
-            </a>
+  <div className="hidden md:flex gap-8 text-sm font-medium">
 
-            <a href="#brands" className="hover:text-black transition">
-              Brands
-            </a>
+    <a href="#products" className="hover:text-black transition">
+      Products
+    </a>
 
-            <a href="#gallery" className="hover:text-black transition">
-              Gallery
-            </a>
+    <a href="#brands" className="hover:text-black transition">
+      Brands
+    </a>
 
-            <a href="#contact" className="hover:text-black transition">
-              Contact
-            </a>
+    <a href="#gallery" className="hover:text-black transition">
+      Gallery
+    </a>
 
-          </div>
+    <a href="#contact" className="hover:text-black transition">
+      Contact
+    </a>
 
-          <button
-            className="md:hidden text-3xl"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            ☰
-          </button>
+  </div>
 
-        </div>
+  <button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="md:hidden text-3xl font-bold"
+  >
+    ☰
+  </button>
+
+</div>
 
       </header>
 
       {
-        menuOpen && (
+  menuOpen && (
 
-          <div className="md:hidden bg-white shadow-lg border-b px-6 py-6 space-y-4 text-lg font-medium">
+    <div className="md:hidden bg-white border-b shadow-lg px-6 py-6 flex flex-col gap-6 text-lg font-medium">
 
-            <a
-              href="#products"
-              className="block"
-              onClick={() => setMenuOpen(false)}
-            >
-              Products
-            </a>
+      <a href="#products" onClick={() => setMenuOpen(false)}>
+        Products
+      </a>
 
-            <a
-              href="#brands"
-              className="block"
-              onClick={() => setMenuOpen(false)}
-            >
-              Brands
-            </a>
+      <a href="#brands" onClick={() => setMenuOpen(false)}>
+        Brands
+      </a>
 
-            <a
-              href="#gallery"
-              className="block"
-              onClick={() => setMenuOpen(false)}
-            >
-              Gallery
-            </a>
+      <a href="#gallery" onClick={() => setMenuOpen(false)}>
+        Gallery
+      </a>
 
-            <a
-              href="#contact"
-              className="block"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </a>
+      <a href="#contact" onClick={() => setMenuOpen(false)}>
+        Contact
+      </a>
 
-          </div>
+    </div>
 
-        )
-      }
+  )
+}
 
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white animate-fadeIn">
 
