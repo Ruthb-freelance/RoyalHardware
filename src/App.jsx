@@ -1,8 +1,14 @@
+import { useState } from "react"
+
 export default function App() {
+
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
 
       <header className="sticky top-0 z-50 bg-white border-b shadow-sm backdrop-blur-lg">
+
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
           <div>
@@ -15,7 +21,8 @@ export default function App() {
             </p>
           </div>
 
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <div className="hidden md:flex gap-8 text-sm font-medium">
+
             <a href="#products" className="hover:text-black transition">
               Products
             </a>
@@ -31,10 +38,61 @@ export default function App() {
             <a href="#contact" className="hover:text-black transition">
               Contact
             </a>
-          </nav>
+
+          </div>
+
+          <button
+            className="md:hidden text-3xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
 
         </div>
+
       </header>
+
+      {
+        menuOpen && (
+
+          <div className="md:hidden bg-white shadow-lg border-b px-6 py-6 space-y-4 text-lg font-medium">
+
+            <a
+              href="#products"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
+              Products
+            </a>
+
+            <a
+              href="#brands"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
+              Brands
+            </a>
+
+            <a
+              href="#gallery"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
+              Gallery
+            </a>
+
+            <a
+              href="#contact"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </a>
+
+          </div>
+
+        )
+      }
 
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white animate-fadeIn">
 
