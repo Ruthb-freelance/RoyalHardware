@@ -9,50 +9,48 @@ export default function App() {
 
       <header className="sticky top-0 z-50 bg-white border-b shadow-sm backdrop-blur-lg">
 
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-          <div>
-            <h1 className="text-2xl font-bold tracking-tight">
-              Royal Hardware
-            </h1>
+    <div>
+      <h1 className="text-2xl font-bold tracking-tight">
+        Royal Hardware
+      </h1>
 
-            <p className="text-sm text-gray-500">
-              Nagavara, Bengaluru
-            </p>
-          </div>
+      <p className="text-sm text-gray-500">
+        Nagavara, Bengaluru
+      </p>
+    </div>
 
-          <div className="flex items-center gap-4">
+    <div className="hidden md:flex gap-8 text-sm font-medium">
 
-  <div className="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#products" className="hover:text-black transition">
+        Products
+      </a>
 
-    <a href="#products" className="hover:text-black transition">
-      Products
-    </a>
+      <a href="#brands" className="hover:text-black transition">
+        Brands
+      </a>
 
-    <a href="#brands" className="hover:text-black transition">
-      Brands
-    </a>
+      <a href="#gallery" className="hover:text-black transition">
+        Gallery
+      </a>
 
-    <a href="#gallery" className="hover:text-black transition">
-      Gallery
-    </a>
+      <a href="#contact" className="hover:text-black transition">
+        Contact
+      </a>
 
-    <a href="#contact" className="hover:text-black transition">
-      Contact
-    </a>
+    </div>
+
+    <button
+      onClick={() => setMenuOpen(!menuOpen)}
+      className="block md:hidden text-3xl font-bold"
+    >
+      ☰
+    </button>
 
   </div>
 
-  <button
-    onClick={() => setMenuOpen(!menuOpen)}
-    className="md:hidden text-3xl font-bold"
-  >
-    ☰
-  </button>
-
-</div>
-
-      </header>
+</header>
 
       {
   menuOpen && (
